@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+
+        />
+
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image">
+
+        <RadioButton
+            android:id="@+id/radio_glide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Glide URl"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <RadioButton
+            android:id="@+id/radio_load_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Load App URl"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <RadioButton
+            android:id="@+id/radio_retrofit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Retrofit URl"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </RadioGroup>
+
+    <com.predator.theeagle.animationproject.LoadingButton
+        android:id="@+id/custom_button"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:backgroundColor="@color/design_default_color_primary"
+        app:textColor="@color/white"
+        app:buttonLoadingColor="@color/design_default_color_primary_dark"
+        app:buttonCircleColor="@color/orange"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
